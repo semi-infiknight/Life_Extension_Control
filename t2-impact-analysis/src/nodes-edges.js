@@ -1,0 +1,201 @@
+const position = { x: 0, y: 0 };
+const edgeType = "smoothstep";
+
+export const initialNodes = [
+  {
+    id: "1a",
+    type: "input",
+    data: { label: "Business requirement" },
+    position
+  },
+  {
+    id: "1b",
+
+    data: { label: "Stakeholder requirement" },
+    position
+  },
+  {
+    id: "1",
+
+    data: { label: "T2 Requirement" },
+    position
+  },
+  {
+    id: "2",
+    data: { label: "Engine efficiency requirement" },
+    position
+  },
+  {
+    id: "2a",
+    data: {
+      label:
+        "Virtual Test case 2.1 (reduced efficiency & increased fuel consumption)"
+    },
+    position
+  },
+  {
+    id: "2b",
+    data: {
+      label:
+        "physical Test case 2.2 (reduced efficiency & increased fuel consumption)"
+    },
+    position
+  },
+  {
+    id: "2c",
+    data: { label: "Engine (Simulink model)" },
+    position
+  },
+  {
+    id: "2d",
+    data: { label: "Engine (Physical model)" },
+    position
+  },
+
+  {
+    id: "3",
+    data: { label: "Power output requirement    " },
+    position
+  },
+  {
+    id: "3a",
+    data: {
+      label: "Virtual Test case 3.4 (reduced power generation)"
+    },
+    position
+  },
+  {
+    id: "3b",
+    data: {
+      label: "physical Test case 3.5 (reduced power generation)"
+    },
+    position
+  },
+  {
+    id: "3c",
+    data: { label: "Engine (Simulink model)" },
+    position
+  },
+  {
+    id: "3d",
+    data: { label: "Engine (Physical model)" },
+    position
+  },
+
+  {
+    id: "4",
+    data: { label: "component life and durability requirement    " },
+    position
+  },
+  {
+    id: "4a",
+    data: {
+      label:
+        "Virtual Test case 4.5 (accelerate component degradation, reduce their operational life)"
+    },
+    position
+  },
+  {
+    id: "4b",
+    data: {
+      label:
+        "physical Test case 4.6 (accelerate component degradation, reduce their operational life)"
+    },
+    position
+  },
+  {
+    id: "4c",
+    data: { label: "Engine (Simulink model)" },
+    position
+  },
+  {
+    id: "4d",
+    data: { label: "Engine (Physical model)" },
+    position
+  },
+
+  {
+    id: "5",
+    data: { label: "Component requirement" },
+    position
+  },
+  {
+    id: "5a",
+    data: {
+      label: "CAD Model"
+    },
+    position
+  },
+  {
+    id: "5b",
+    data: {
+      label: "CAD Data"
+    },
+    position
+  },
+  {
+    id: "5c",
+    data: { label: "Manufacturing Model" },
+    position
+  },
+  {
+    id: "5d",
+    data: { label: "Bill of Materials" },
+    position
+  },
+
+  {
+    id: "6",
+    data: { label: "Thermal requirement" },
+    position
+  },
+  {
+    id: "6a",
+    data: {
+      label: "Virtual Test case 9.4  (Thermal stress)"
+    },
+    position
+  },
+
+  {
+    id: "6c",
+    data: { label: "Thermal Analysis model" },
+    position
+  },
+  {
+    id: "6d",
+    data: { label: "Thermal Model data" },
+    position
+  }
+];
+
+export const initialEdges = [
+  { id: "e1ab", source: "1a", target: "1b", type: edgeType, animated: true },
+  { id: "e2ab", source: "1b", target: "1", type: edgeType, animated: true },
+  { id: "e3ab", source: "1", target: "2", type: edgeType, animated: true },
+  { id: "e4ab", source: "1", target: "3", type: edgeType, animated: true },
+  { id: "e5ab", source: "1", target: "4", type: edgeType, animated: true },
+  { id: "e6ab", source: "1", target: "5", type: edgeType, animated: true },
+  { id: "e7ab", source: "1", target: "6", type: edgeType, animated: true },
+  { id: "e8ab", source: "1", target: "7", type: edgeType, animated: true },
+  { id: "e9ab", source: "2", target: "2a", type: edgeType, animated: true },
+  { id: "e10ab", source: "2", target: "2b", type: edgeType, animated: true },
+  { id: "e11ab", source: "2a", target: "2c", type: edgeType, animated: true },
+  { id: "e12ab", source: "2b", target: "2d", type: edgeType, animated: true },
+  { id: "e13ab", source: "3", target: "3a", type: edgeType, animated: true },
+  { id: "e14ab", source: "3", target: "3b", type: edgeType, animated: true },
+  { id: "e15ab", source: "3a", target: "3c", type: edgeType, animated: true },
+  { id: "e16ab", source: "3b", target: "3d", type: edgeType, animated: true },
+  { id: "e17ab", source: "4", target: "4a", type: edgeType, animated: true },
+  { id: "e18ab", source: "4", target: "4b", type: edgeType, animated: true },
+  { id: "e19ab", source: "4a", target: "4c", type: edgeType, animated: true },
+  { id: "e20ab", source: "4b", target: "4d", type: edgeType, animated: true },
+  { id: "e21ab", source: "5", target: "5a", type: edgeType, animated: true },
+  { id: "e22ab", source: "5a", target: "5b", type: edgeType, animated: true },
+  { id: "e23ab", source: "5a", target: "5c", type: edgeType, animated: true },
+  { id: "e24ab", source: "5c", target: "5d", type: edgeType, animated: true },
+  { id: "e25ab", source: "6", target: "6a", type: edgeType, animated: true },
+
+  { id: "e27ab", source: "6a", target: "6c", type: edgeType, animated: true },
+  { id: "e28ab", source: "6c", target: "6d", type: edgeType, animated: true }
+];
