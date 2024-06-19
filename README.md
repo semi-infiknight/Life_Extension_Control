@@ -1,5 +1,5 @@
 # Life Extension Control Web Application
-# Life Extension Control for Jet Engine Web Application
+
 
 ## Introduction
 This application is designed to help engineers and maintenance crews manage the lifecycle and extend the operational life of jet engines. The web application provides tools for monitoring engine health, scheduling maintenance, and analyzing performance data to optimize engine lifespan.
